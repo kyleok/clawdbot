@@ -1,6 +1,6 @@
 # Repository Guidelines
 - Repo: https://github.com/clawdbot/clawdbot
-- GitHub issues/comments/PR comments: use literal multiline strings or `-F - <<'EOF'` (or $'...') for real newlines; never embed "\\n".
+- GitHub issues/comments/PR comments: use literal multiline strings or `-F - <<'EOF'` (or $'...') for real newlines; never embed "\n".
 
 ## Project Structure & Module Organization
 - Source code: `src/` (CLI wiring in `src/cli`, commands in `src/commands`, web provider in `src/provider-web.ts`, infra in `src/infra`, media pipeline in `src/media`).
@@ -140,3 +140,8 @@
 - Publish: `npm publish --access public --otp="<otp>"` (run from the package dir).
 - Verify without local npmrc side effects: `npm view <pkg> version --userconfig "$(mktemp)"`.
 - Kill the tmux session after publish.
+
+## Memex Integration
+
+> **Note:** This repo must stay up-to-date. A clone exists in `memex/me/projects/` for agent memory search purposes only — the GitHub repo is the source of truth.
+
